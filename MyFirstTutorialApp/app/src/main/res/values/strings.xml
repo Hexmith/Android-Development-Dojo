@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">My First Tutorial App</string>
+    <string name="sword_art_online">Sword Art Online</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="link_start">Link Start</string>
+    <string name="logged_in_image">Image confirming that the user had successfully logged in.</string>
+</resources>
