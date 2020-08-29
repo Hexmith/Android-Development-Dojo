@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Currency Converter</string>
+    <string name="title_text_view">Currency Converter</string>
+    <string name="subtitle_text_view"><![CDATA[USD -> JPY]]></string>
+    <string name="edit_text_number">Enter the amount in USD...</string>
+    <string name="button">Convert</string>
+</resources>
