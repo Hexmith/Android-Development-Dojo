@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
 
         // Converting the amount entered by the user if it isn't empty.
         if (amountToConvert.getText().toString().equals("")) {
-            Toast.makeText(this, "Please, enter any amount.", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Please, enter any amount in USD.", Toast.LENGTH_SHORT).show();
         } else {
             // 1 USD = 105.36 JPY (08/28/2020).
             double usdInJpyRate = 105.36;
