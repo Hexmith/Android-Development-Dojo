@@ -30,10 +30,14 @@ public class MainActivity extends AppCompatActivity {
         }
 
         // Getting the guess input from the user.
-        EditText editText = (EditText) findViewById(R.id.editTextGuess);
+        EditText editText = findViewById(R.id.editTextGuess);
 
         // Checking if the user guessed the correct number.
-        checkGuess(Integer.parseInt(editText.getText().toString()));
+        if (!editText.getText().toString().equals("")) {
+            checkGuess(Integer.parseInt(editText.getText().toString()));
+        } else {
+            Toast.makeText(this, "Please, enter a number.", Toast.LENGTH_SHORT).show();
+        }
 
         // "Resetting" the app by changing the number to be guessed.
         if (isGuessCorrect) {
@@ -46,18 +50,22 @@ public class MainActivity extends AppCompatActivity {
      * Checks whether the user has guessed the correct number or not.
      */
     public void checkGuess(int guess) {
+        String message;
+
         if (guess == chosenNumber) {
             // The player guessed the correct number!
             isGuessCorrect = true;
 
-            Toast.makeText(this, "You guessed!", Toast.LENGTH_LONG).show();
+            message = "You guessed!";
         } else if (guess > chosenNumber) {
             // The player guessed a higher number than the chosen one.
-            Toast.makeText(this, "Nope, try going lower.", Toast.LENGTH_SHORT).show();
+            message = "Nope, try going lower.";
         } else {
             // The player guessed a lower number than the chosen one.
-            Toast.makeText(this, "Nope, try going higher.", Toast.LENGTH_SHORT).show();
+            message = "Nope, try going higher.";
         }
+
+        Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
     }
 
 }
